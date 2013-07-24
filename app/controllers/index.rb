@@ -8,6 +8,7 @@ get '/new' do
 end
 
 post '/' do
+  puts request.body.read
   user = User.new(params[:user])
   if user.save
     redirect to '/'
