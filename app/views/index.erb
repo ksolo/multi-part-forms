@@ -1,8 +1,8 @@
 <div class="container">
   <% @users.each do |u| %>
     <div class="user-display">
-      <img src="<%= user.photo.url %>" title="<%= user.name %>">
-      <p><%= user.name %></p>
+      <img src="<%= u.photo.url %>" title="<%= u.name %>">
+      <p><%= u.name %></p>
     </div>
   <% end %>
   <br>
