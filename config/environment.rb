@@ -22,8 +22,9 @@ require 'erb'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
-
 APP_NAME = APP_ROOT.basename.to_s
+
+set :root, APP_ROOT
 
 # Set up the controllers and helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
